@@ -100,13 +100,13 @@ public class PracticalTest01Var06MainActivity extends Activity {
 				
 				
 
-				if (passFailButton.getText().toString().equals("PASS") &&
-						serviceStatus == 0) {
+				//if (passFailButton.getText().toString().equals("PASS") &&
+				//		serviceStatus == 0) {
 					Intent intent = new Intent(getApplicationContext(), PracticalTest01Var06Service.class);
 					intent.putExtra("InternetAddressService", uriEditText.getText().toString());
 					getApplicationContext().startService(intent);
 					serviceStatus = 1;
-				}
+				//}
 			} else {
 				passFailButton.setText("FAIL");
 				passFailButton.setBackground(getResources().getDrawable(R.color.red));

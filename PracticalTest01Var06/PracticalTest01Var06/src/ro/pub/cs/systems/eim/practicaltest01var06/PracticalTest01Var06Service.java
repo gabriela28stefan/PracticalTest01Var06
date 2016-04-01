@@ -11,7 +11,7 @@ public class PracticalTest01Var06Service extends Service {
 		public int onStartCommand(Intent intent, int flags, int startId) {
 			String internetString = intent.getStringExtra("InternetAddressService");
 			
-			processingThread = new ProcessingThread(this, internetString);
+			processingThread = new ProcessingThread(getApplicationContext(), internetString);
 			processingThread.start();
 			return Service.START_REDELIVER_INTENT;
 		}
