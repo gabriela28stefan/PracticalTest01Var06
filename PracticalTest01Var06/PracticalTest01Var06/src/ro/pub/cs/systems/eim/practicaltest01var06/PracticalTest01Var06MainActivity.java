@@ -30,6 +30,13 @@ public class PracticalTest01Var06MainActivity extends Activity {
 	EditText uriEditText;
 	Button navigateButton;
 	
+	final public static String[] actionTypes = {
+		"ro.pub.cs.systems.eim.practicaltest01.actionType1",
+		"ro.pub.cs.systems.eim.practicaltest01.actionType2",
+
+	};
+	
+	
 	private ButtonOnClickListener buttonListener = new ButtonOnClickListener();
 	private class ButtonOnClickListener implements View.OnClickListener {
 
@@ -77,6 +84,9 @@ public class PracticalTest01Var06MainActivity extends Activity {
 	
 	
 	private IntentFilter  filter = new IntentFilter();
+	
+	
+	
 	private EditTextListener editTextListener = new EditTextListener();
 	private class EditTextListener implements TextWatcher {
 
@@ -144,6 +154,10 @@ public class PracticalTest01Var06MainActivity extends Activity {
         
         first.setText(String.valueOf(0));
         uriEditText.setText(String.valueOf(0));
+        
+		for (int index = 0; index < actionTypes.length; index++) {
+			filter.addAction(actionTypes[index]);
+		} 
         
         
     }

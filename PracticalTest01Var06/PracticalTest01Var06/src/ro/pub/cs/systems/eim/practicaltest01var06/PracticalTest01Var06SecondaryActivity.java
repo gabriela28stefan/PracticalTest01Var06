@@ -17,7 +17,7 @@ public class PracticalTest01Var06SecondaryActivity extends Activity {
 	Button ok;
 	Button cancel;
 	
-	
+
 	private ButtonListener buttonListener = new ButtonListener();
 	private class ButtonListener implements View.OnClickListener {
 
@@ -62,6 +62,8 @@ public class PracticalTest01Var06SecondaryActivity extends Activity {
 			String state = intent.getStringExtra("stateButton");
 			resultView.setText(state);
 		}
+		
+
 		
 	}
 
