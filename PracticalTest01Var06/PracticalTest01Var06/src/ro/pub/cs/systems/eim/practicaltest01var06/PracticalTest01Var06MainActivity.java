@@ -206,6 +206,15 @@ public class PracticalTest01Var06MainActivity extends Activity {
     	super.onPause();
     }
     
+    
+
+	@Override
+	protected void onDestroy() {
+		Intent intent = new Intent(this, PracticalTest01Var06Service.class);
+		stopService(intent);
+		super.onDestroy();
+	}
+    
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

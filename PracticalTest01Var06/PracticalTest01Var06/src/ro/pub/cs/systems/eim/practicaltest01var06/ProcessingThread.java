@@ -36,10 +36,9 @@ public class ProcessingThread extends Thread {
 	@Override
 	public void run() {
 		Log.d("[ProcessingThread]", "Thread has started!");
-		while (isRunning) {
 			sendMessage();
 			sleep();
-		}
+		
 		Log.d("[ProcessingThread]", "Thread has stopped!");
 	}
 	
